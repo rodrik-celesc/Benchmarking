@@ -4,6 +4,4 @@ __pycache__/
 
 # Pastas
 arquivo/
-
-# Ignorar arquivos do Streamlit
-.streamlit/
+dados/
