@@ -4,4 +4,3 @@ streamlit
 altair
 Pillow
 streamlit-option-menu
-indicadores
