@@ -2,7 +2,6 @@
 # MÓDULOS
 import streamlit as st
 import pandas as pd
-import altair as alt
 from PIL import Image
 from streamlit_option_menu import option_menu
 

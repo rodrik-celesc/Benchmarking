@@ -1,9 +1,8 @@
 
 # MÓDULOS
 import streamlit as st
-import pandas as pd
-import time
 from streamlit_option_menu import option_menu
+import indicadores as ind
 
 # CONFIGURAÇÃO DE PÁGINA
 st.set_page_config(
@@ -18,39 +17,44 @@ st.set_page_config(
     }
 )
 
-
+# --------------------------------------------------------------------
 # BARRA LATERAL
-# with st.sidebar:
-select = option_menu(
-    menu_title='Estrutura de Capital',
-    options=[
-        'Divida Total Liquida', 
-        'Divida Total Bruta'
-        ],
-    icons=[
-        'house', 
-        'bar-chart'
-        ],
-    default_index=0,
-    orientation='horizontal',
-    styles={
-        'container': {
-            'padding': '5!important', 
-            'background-color': '#f0f2f6'
-            },
-        'icon': {
-            'color': '#1f77b4', 
-            'font-size': '14px'
-            },
-        'nav-link': {
-            'font-size': '12px', 
-            'text-align': 'left', 
-            'margin': '2px', 
-            '--hover-color': '#e8f4fd'
-            },
-        'nav-link-selected': {
-            'background-color': '#1f77b4', 
-            'color': 'white'
-            },
-    }
-)
+# --------------------------------------------------------------------
+with st.sidebar:
+    selecao = option_menu(
+        menu_title=None,
+        options=[
+            'Dívida Bruta / Ativo Total', 
+            'Dívida Bruta / Patr. Líq.',
+            'Dívida Líquida / Patr. Líq.',
+            'Dívida CP / Dívida Total'
+            ],
+        icons=[
+            'bar-chart', 
+            'bar-chart',
+            'bar-chart',
+            'bar-chart'
+            ],
+        default_index=0,
+        orientation='vertical',
+        styles={
+            'container': {
+                'padding': '5!important', 
+                'background-color': '#f0f2f6'
+                },
+            'icon': {
+                'color': '#1f77b4', 
+                'font-size': '14px'
+                },
+            'nav-link': {
+                'font-size': '12px', 
+                'text-align': 'left', 
+                'margin': '2px', 
+                '--hover-color': '#e8f4fd'
+                },
+            'nav-link-selected': {
+                'background-color': '#1f77b4', 
+                'color': 'white'
+                },
+        }
+    )
