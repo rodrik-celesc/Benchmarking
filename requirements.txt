@@ -3,5 +3,5 @@ openpyxl
 streamlit
 altair
 Pillow
-treamlit_option_menu
+streamlit-option-menu
 indicadores
