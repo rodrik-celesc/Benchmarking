@@ -8,7 +8,7 @@ from streamlit_option_menu import option_menu
 # CONFIGURAÇÃO DE PÁGINA
 st.set_page_config(
     page_title='Benchmarking Celesc',
-    page_icon=':house:zap::',
+    page_icon=':zap:',
     layout='wide',
     initial_sidebar_state='auto',
     menu_items={
@@ -31,7 +31,7 @@ def dados():
     
     # Importar
     df =  pd.read_excel(
-        io='base_de_dados.xlsx',
+        io='./base_de_dados.xlsx',
         sheet_name='dados',
         engine='openpyxl'
     )
